@@ -26,6 +26,7 @@ fun calculDegatArme(nbDes:Int, nbFaces:Int, qualiteArme:Int, activationCC:Int, m
     return result
 }
 
+/* Exo4*/
 fun attaque(PV:Int, degatArme:Int, defTotal:Int, nomAttaquant:String, nomCible:String){
     var result= degatArme-defTotal
 
@@ -47,6 +48,17 @@ fun attaque(PV:Int, degatArme:Int, defTotal:Int, nomAttaquant:String, nomCible:S
 
 }
 
+/* Exo 5*/
+fun boirePotion(nomPerso:String, nbPvPerso:Int, nbPvMaxPerso:Int, puissancePotion:Int){
+    var ancienPv=nbPvPerso
+    var NvPv=nbPvPerso+puissancePotion
+    if (NvPv>nbPvMaxPerso){
+        NvPv=nbPvMaxPerso
+    }
+    var PvRecuperer=NvPv-ancienPv
+    return println("$nomPerso boit une potion et récupere $PvRecuperer PV")
+}
+
 fun main(){
     /* Exo 1
     print(calculDefenseTotal(3,2,1))
@@ -54,13 +66,16 @@ fun main(){
         "Erreur la valeur obtenue est de ${calculDefenseTotal(3,2, 1)}"
     }*/
 
-    /*Exo2
+    /*Exo 2
     print(lanceDes(4,20))*/
 
     /* Exo 3
     print(calculDegatArme(2,4,2,10,2))*/
 
+    /* Exo 4
+    print(attaque(5,9,2,"Attaquant", "Cible"))*/
 
-    print(attaque(5,9,2,"Attaquant", "Cible"))
+    /* Exo 5
+    print(boirePotion("perso",18,20,6))*/
 
 }
